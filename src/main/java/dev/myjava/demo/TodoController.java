@@ -2,6 +2,7 @@ package dev.myjava.demo;
 
 import dev.myjava.demo.models.Todo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -46,6 +47,11 @@ public class TodoController {
 //    }
     String getTodoByIdParam(@RequestParam(name = "todoId") long id) {
         return "Todo with param id " + id;
+    }
+
+    @GetMapping("/page")
+    ResponseEntity<Page<Todo>> getTodoPages(@RequestParam int page, @RequestParam int size){
+        return new ResponseEntity<>(todoService.getTodoPage(page, size), HttpStatus.OK);
     }
 
     @PostMapping("/create")
