@@ -1,6 +1,7 @@
-package dev.myjava.demo;
+package dev.myjava.demo.service;
 
 import dev.myjava.demo.models.Todo;
+import dev.myjava.demo.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

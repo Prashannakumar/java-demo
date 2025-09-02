@@ -1,5 +1,6 @@
-package dev.myjava.demo;
+package dev.myjava.demo.controller;
 
+import dev.myjava.demo.service.TodoService;
 import dev.myjava.demo.models.Todo;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
